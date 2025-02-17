@@ -1,0 +1,119 @@
+/* === VARIABLES GLOBALES === */
+:root {
+    --color-primario: #1e3a8a;
+    --color-primario-hover: #3b82f6;
+    --color-fondo: #f3f4f6;
+    --color-texto: #333;
+    --color-borde: #e5e7eb;
+    --color-texto-suave: #6b7280;
+    --radio-borde: 5px;
+    --padding-general: 10px;
+}
+
+/* === RESETEO BÁSICO === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* === ESTILOS GENERALES === */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* === CABECERA === */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--color-primario);
+}
+
+/* === FORMULARIO === */
+form {
+    display: flex;
+    gap: var(--padding-general);
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: var(--padding-general);
+    width: 250px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+}
+
+button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: var(--padding-general) 20px;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-primario-hover);
+}
+
+/* === LISTA DE TAREAS === */
+ul {
+    list-style: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+li {
+    background-color: white;
+    padding: var(--padding-general);
+    margin-bottom: var(--padding-general);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#empty-message {
+    font-style: italic;
+    color: var(--color-texto-suave);
+}
+
+/* === BOTON ELIMINAR === */
+.delete-button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background-color: #dc2626;
+}
+
+/* === TAREA COMPLETADA === */
+.completed {
+    text-decoration: line-through;
+    color: var(--color-texto-suave);
+    opacity: 0.7;
+}
+
+/* === PIE DE PÁGINA === */
+footer {
+    margin-top: auto;
+    padding-top: var(--padding-general);
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+}

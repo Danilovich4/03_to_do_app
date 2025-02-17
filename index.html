@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <!-- ===META TAGS===-->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>To-Do App</title>
+
+        <!-- ===ENLACES EXTERNOS===-->
+        <link rel="stylesheet" href="src/css/style.css">
+        <script src="src/js/app.js" defer></script>
+
+        <!-- ===TITULO===-->
+        <title>To-Do App | Lista de Tareas</title>
     </head>
     <body>
-        <h1>Lista de Tareas</h1>
+        <header>
+            <h1>Lista de Tareas</h1>
+        </header>
+        <main>
+            <!-- ===FORMULARIO PARA AÑADIR TAREA=== -->
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Añadir nueva tarea..." required>
+                <button type="submit">Agregar</button>
+            </form>
+            <!-- ===LISTA DONDE SE MOSTRARÁN LAS TAREAS=== -->
+            <ul id="task-list">
+                <!-- Aquí se añadirán las tareas dinámicamente con JS -->
+            </ul>
+
+            <!-- ===MENSAJE POR SI NO HAY TAREAS=== -->
+            <p id="empty-message" style="display: none;">No hay tareas por ahora.</p>
+        </main>
+
+        <footer>
+            <p>Aplicación de Lista de Tareas - Desarrollada por Daniel Lopez</p>
+        </footer>
     </body>
 </html>
